@@ -18,13 +18,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Build with Maven (di subfolder)
-      run: |
-        cd Basic-Java-Maven-main-SCD
-        mvn clean install
+    - name: Build with Maven
+      run: mvn clean install
 
     - name: Simulasi Deploy
       run: |
-        cd Basic-Java-Maven-main-SCD
         mkdir -p simulasi-deploy
         cp target/*.jar simulasi-deploy/
